@@ -1,4 +1,4 @@
-{% set version = '0.8.2' %}
+{% set version = "0.8.3" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,10 +10,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/maditr_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/maditr/maditr_{{ version }}.tar.gz
-  sha256: f06835f6d4b19cf163d6294ec20b792e6cb320699935635c99cc5ff2df2dafda
+  sha256: 87a1a6d7f996db7dd076593d12c20bdb31db955a05e77465b6e58bb400111e81
 
 build:
-  merge_build_host: True  # [win]
+  merge_build_host: true  # [win]
   number: 0
   noarch: generic
   rpaths:
@@ -41,16 +41,11 @@ test:
 about:
   home: https://github.com/gdemin/maditr
   license: GPL-2.0-only
-  summary: Provides pipe-style interface for 'data.table'. Package preserves all 'data.table'
-    features without significant impact on performance. 'let' and 'take' functions are
-    simplified interfaces for most common data manipulation tasks. For example, you
-    can write 'take(mtcars, mean(mpg), by = am)' for aggregation or 'let(mtcars, hp_wt
-    = hp/wt, hp_wt_mpg = hp_wt/mpg)' for modification. Use 'take_if/let_if' for conditional
-    aggregation/modification. Additionally there are some conveniences such as automatic
-    'data.frame' conversion to 'data.table'.
+  summary: Provides pipe-style interface for 'data.table'. Package preserves all 'data.table' features without significant impact on performance. 'let' and 'take' functions are simplified interfaces for most common data manipulation tasks. For example, you can write 'take(mtcars, mean(mpg), by = am)' for aggregation or 'let(mtcars,
+    hp_wt = hp/wt, hp_wt_mpg = hp_wt/mpg)' for modification. Use 'take_if/let_if' for conditional aggregation/modification. Additionally there are some conveniences such as automatic 'data.frame' conversion to 'data.table'.
   license_family: GPL2
   license_file:
-    - '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2'
+    - {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2
 
 extra:
   recipe-maintainers:
