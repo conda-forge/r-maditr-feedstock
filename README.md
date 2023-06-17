@@ -1,11 +1,11 @@
-About r-maditr
-==============
+About r-maditr-feedstock
+========================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-maditr-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/gdemin/maditr
 
 Package license: GPL-2.0-only
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-maditr-feedstock/blob/main/LICENSE.txt)
 
 Summary: Provides pipe-style interface for 'data.table'. Package preserves all 'data.table' features without significant impact on performance. 'let' and 'take' functions are simplified interfaces for most common data manipulation tasks. For example, you can write 'take(mtcars, mean(mpg), by = am)' for aggregation or 'let(mtcars, hp_wt = hp/wt, hp_wt_mpg = hp_wt/mpg)' for modification. Use 'take_if/let_if' for conditional aggregation/modification. Additionally there are some conveniences such as automatic 'data.frame' conversion to 'data.table'.
 
